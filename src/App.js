@@ -24,6 +24,7 @@ class App extends React.Component {
             <div>
                 <button onClick={this.handleClick('dfs')}>DFS</button>
                 <button onClick={this.handleClick('bfs')}>BFS</button>
+                <button onClick={this.handleClick('a*')}>A*</button>
                 <button onClick={this.handleClick('clear')}>Clear</button>
                 <P5Wrapper
                     sketch={Grid}

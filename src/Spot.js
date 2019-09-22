@@ -16,6 +16,9 @@ class Spot {
 		this.state = 0
 		this.label = 0
 		this.prev = null
+		this.gScore = Infinity
+		this.fScore = Infinity
+		this.sizeOffset = 0
 	}
 }
 
