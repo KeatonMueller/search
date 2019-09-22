@@ -130,10 +130,12 @@ const sketch = (p) => {
 			else{
 				anim = false
 				clear = true
-				for(var i = 0; i < numRows; i++){
-					for(var j = 0; j < numCols; j++){
-						if(grid[i][j].label === -1){
-							grid[i][j].label = 0
+				if(newProps.type === 'clearAll'){
+					for(var i = 0; i < numRows; i++){
+						for(var j = 0; j < numCols; j++){
+							if(grid[i][j].label === -1){
+								grid[i][j].label = 0
+							}
 						}
 					}
 				}

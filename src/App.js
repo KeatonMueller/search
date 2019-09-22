@@ -10,11 +10,11 @@ class App extends React.Component {
     }
 
     handleClick = (type) => () => {
-        if(type !== 'clear'){
+        if(type !== 'clearSearch' && type !== 'clearAll'){
             this.setState({ anim: true, type: type })
         }
         else{
-            this.setState({ anim: false, type: 'clear' })
+            this.setState({ anim: false, type: type })
         }
     }
 
@@ -25,7 +25,8 @@ class App extends React.Component {
                 <button onClick={this.handleClick('dfs')}>DFS</button>
                 <button onClick={this.handleClick('bfs')}>BFS</button>
                 <button onClick={this.handleClick('a*')}>A*</button>
-                <button onClick={this.handleClick('clear')}>Clear</button>
+                <button onClick={this.handleClick('clearSearch')}>Clear Search</button>
+                <button onClick={this.handleClick('clearAll')}>Clear All</button>
                 <P5Wrapper
                     sketch={Grid}
                     anim={this.state.anim}
