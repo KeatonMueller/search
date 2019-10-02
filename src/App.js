@@ -1,6 +1,9 @@
 import React from 'react'
 import P5Wrapper from 'react-p5-wrapper'
-import Grid from './Grid'
+import SearchGrid from './SearchGrid'
+
+import Button from '@material-ui/core/Button'
+import Grid from '@material-ui/core/Grid'
 
 class App extends React.Component {
     constructor(){
@@ -22,13 +25,29 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.handleClick('dfs')}>DFS</button>
-                <button onClick={this.handleClick('bfs')}>BFS</button>
-                <button onClick={this.handleClick('a*')}>A*</button>
-                <button onClick={this.handleClick('clearSearch')}>Clear Search</button>
-                <button onClick={this.handleClick('clearAll')}>Clear All</button>
+            <Grid container spacing={8} justify='center'>
+                <Grid item xs={6} container spacing={1} justify='center'>
+                    <Grid item>
+                        <Button variant='contained' onClick={this.handleClick('dfs')}>DFS</Button>
+                    </Grid>
+                    <Grid item>
+                        <Button variant='contained' onClick={this.handleClick('bfs')}>BFS</Button>
+                    </Grid>
+                    <Grid item>
+                        <Button variant='contained' onClick={this.handleClick('a*')}>A*</Button>
+                    </Grid>
+                </Grid>
+                <Grid item xs={6} container spacing={1} justify='center'>
+                    <Grid item>
+                        <Button variant='contained' onClick={this.handleClick('clearSearch')}>Clear Search</Button>
+                    </Grid>
+                    <Grid item>
+                        <Button variant='contained' onClick={this.handleClick('clearAll')}>Clear All</Button>
+                    </Grid>
+                </Grid>
+            </Grid>
                 <P5Wrapper
-                    sketch={Grid}
+                    sketch={SearchGrid}
                     anim={this.state.anim}
                     type={this.state.type}
                 >
