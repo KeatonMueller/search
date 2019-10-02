@@ -245,6 +245,7 @@ const sketch = (p) => {
 			}
 			if(!clear){
 				recalculate = true
+				p.draw()
 			}
 			if(clicked.length > 0){
 				p.loop()
