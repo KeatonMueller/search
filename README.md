@@ -10,7 +10,7 @@ Alternatively, you can clone this repo and run `npm install` followed by `npm st
 ## Info
 The green square is the starting space, and the red square is the ending space.
 
-Click on one of the buttons above to start the visualization for different search algorithms.
+Click on one of the buttons above the grid to start the visualization for different search algorithms.
 
 Click on any square that isn't green or red to turn it black, indicating a wall.
 
