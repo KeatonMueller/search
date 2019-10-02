@@ -3,7 +3,9 @@ This application is a visualization tool for various search algorithms. Currentl
 
 This project began in 2019 during my junior year of college, and is still ongoing.
 
-To run it, you can clone this repo and run `npm install` followed by `npm start`.
+To view it running, visit https://keatonmueller.github.io/#/search.
+
+Alternatively, you can clone this repo and run `npm install` followed by `npm start`.
 
 ## Info
 The green square is the starting space, and the red square is the ending space.
