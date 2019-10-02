@@ -3,15 +3,15 @@ import Spot from './Spot'
 const sketch = (p) => {
 	var canvas
 	const border = 0
-	const width = p.windowWidth
-	const height = p.windowHeight
+	var width
+	var height
 	const boxSize = 16
-	const numRows = Math.floor(height / boxSize)
-	const numCols = Math.floor(width / boxSize)
-	var startRow = Math.floor(numRows/2)
-	var startCol = Math.floor(numCols/4)
-	var endRow = startRow
-	var endCol = 3*startCol
+	var numRows
+	var numCols
+	var startRow
+	var startCol
+	var endRow
+	var endCol
 	const speed = 150
 	var grid = []
 	var queue = []
@@ -34,6 +34,17 @@ const sketch = (p) => {
 
 	p.setup = () => {
 		p.noLoop()
+		width = p.windowWidth
+		height = p.windowHeight
+
+		numRows = Math.floor(height / boxSize)
+		numCols = Math.floor(width / boxSize)
+
+		startRow = Math.floor(numRows/2)
+		startCol = Math.floor(numCols/4)
+		endRow = startRow
+		endCol = 3*startCol
+
 		canvas = p.createCanvas(width, height)
 		for(var i = 0; i < numRows; i++){
 			var newRow = []
@@ -52,6 +63,44 @@ const sketch = (p) => {
 		startSpot.fScore = h(startRow, startCol)
 		queue.push(startSpot)
 		openSet.add(startSpot)
+	}
+	p.windowResized = () => {
+		grid = []
+		width = p.windowWidth
+		height = p.windowHeight
+
+		numRows = Math.floor(height / boxSize)
+		numCols = Math.floor(width / boxSize)
+
+		startRow = Math.floor(numRows/2)
+		startCol = Math.floor(numCols/4)
+		endRow = startRow
+		endCol = 3*startCol
+
+		for(var i = 0; i < numRows; i++){
+			var newRow = []
+			for(var j = 0; j < numCols; j++){
+				newRow.push(new Spot(i, j))
+			}
+			grid.push(newRow)
+		}
+
+		clear = true
+		animateSearch = false
+		recalculate = false
+		clicked = []
+
+		startSpot = grid[startRow][startCol]
+		endSpot = grid[endRow][endCol]
+
+		startSpot.label = 1
+		endSpot.label = 2
+		startSpot.gScore = 0
+		startSpot.fScore = h(startRow, startCol)
+		queue.push(startSpot)
+		openSet.add(startSpot)
+		closedSet.clear()
+		p.resizeCanvas(width, height)
 	}
 
 	const resetGrid = () => {
