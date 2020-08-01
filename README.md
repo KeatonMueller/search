@@ -1,7 +1,7 @@
 # Search Algorithm Visualization
-This application is a visualization tool for various search algorithms. Currently it supports DFS, BFS, and A* Search, but more algorithms are intended to be added.
+This application is a visualization tool for various search algorithms. Currently it supports DFS, BFS, and A* Search.
 
-This project began in 2019 during my junior year of college, and is still ongoing.
+This project began in 2019 during my junior year of college. I may add more search algorithms in the future, but I am not currently working on it.
 
 To view it running, visit https://keatonmueller.github.io/#/search.
 
