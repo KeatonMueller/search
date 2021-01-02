@@ -6,7 +6,7 @@ This project began in 2019 during my junior year of college. I may add more sear
 
 To view it running, visit https://keatonmueller.github.io/search.
 
-Alternatively, you can clone this repo and run `npm install` followed by `npm start`.
+Alternatively, you can clone this repo and open `index.html`.
 
 ## Info
 
