@@ -55,7 +55,7 @@ body {
 }
 
 #search-grid .box.empty.path {
-    background-color: rgb(255, 111, 0);
+    background-color: #ff6f00;
     z-index: 10;
 }
 
@@ -80,7 +80,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(72, 72, 72, 0.8);
+    background-color: rgba(#484848, 0.8);
     padding: 5px 10px;
     display: flex;
     flex-direction: column;
