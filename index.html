@@ -5,12 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Search</title>
         <link rel="stylesheet" href="style.css" />
-        <!-- p5.js -->
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+
+        <script defer src="./js/hover.js"></script>
+        <script defer src="./js/index.js" type="module"></script>
     </head>
     <body>
-        <div class="search">
-            <div class="buttons">
+        <div id="test"></div>
+        <div id="search-content">
+            <div id="search-buttons">
                 <span>>></span>
                 <button id="dfs">DFS</button>
                 <button id="bfs">BFS</button>
@@ -18,10 +20,7 @@
                 <button id="clearSearch">Clear Search</button>
                 <button id="clearAll">Clear All</button>
             </div>
-            <!-- p5.js targets the `main` tag -->
-            <main></main>
+            <div id="search-grid"></div>
         </div>
-        <script src="./sketch.js"></script>
-        <script src="./hover.js"></script>
     </body>
 </html>
